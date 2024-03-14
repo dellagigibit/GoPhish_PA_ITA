@@ -13,6 +13,23 @@ CREATE TABLE IF NOT EXISTS "events" ("id" integer primary key autoincrement,"cam
 CREATE TABLE IF NOT EXISTS "campaigns" ("id" integer primary key autoincrement,"user_id" bigint,"name" varchar(255) NOT NULL ,"created_date" datetime,"completed_date" datetime,"template_id" bigint,"page_id" bigint,"status" varchar(255),"url" varchar(255) );
 CREATE TABLE IF NOT EXISTS "attachments" ("id" integer primary key autoincrement,"template_id" bigint,"content" varchar(255),"type" varchar(255),"name" varchar(255) );
 
+-- Trigger associato alla tabella results
+CREATE TRIGGER SetEmailAnonymousAndIPZeroAfterEmailSent
+AFTER UPDATE OF status ON results
+FOR EACH ROW
+WHEN NEW.status != 'Email Sending'
+BEGIN
+    UPDATE results SET email = 'anonymous', ip = '0.0.0.0' WHERE rowid = NEW.rowid;
+END;
+
+-- Trigger associato alla tabella events
+CREATE TRIGGER SetEmailAnonymousAndIPZeroAfterEmailSent_events
+AFTER INSERT ON events
+BEGIN
+    UPDATE events SET details = '', email = 'anonymous' WHERE rowid = NEW.rowid;
+END;
+
+
 -- +goose Down
 -- SQL section 'Down' is executed when this migration is rolled back
 DROP TABLE "attachments";
