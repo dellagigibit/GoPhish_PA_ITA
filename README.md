@@ -1,13 +1,14 @@
 ![gophish logo](https://raw.github.com/gophish/gophish/master/static/images/gophish_purple.png)
 
-Gophish
+GoPhish_PA_ITA
 =======
 
 ![Build Status](https://github.com/gophish/gophish/workflows/CI/badge.svg) [![GoDoc](https://godoc.org/github.com/gophish/gophish?status.svg)](https://godoc.org/github.com/gophish/gophish)
 
-Gophish: Open-Source Phishing Toolkit
+GoPhish_PA_ITA: Open-Source Phishing Toolkit focused on privacy
 
 [Gophish](https://getgophish.com) is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
+
 The fork GoPhish_PA_ITA specifically addresses privacy concerns related to data collection that links actions to individuals, offering solutions within this context.
 
 ### Install
