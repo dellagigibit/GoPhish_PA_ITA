@@ -28,6 +28,28 @@ time="2020-07-29T01:24:08Z" level=info msg="Please login with the username admin
 
 Releases of Gophish prior to v0.10.1 have a default username of `admin` and password of `gophish`.
 
+### Troubleshooting
+
+When developing with github.com/mattn/go-sqlite3, you might encounter a warning indicating a function may return the address of a local variable, specifically in the sqlite3SelectNew function. This issue is known and documented. Always check the official repository for the latest updates or fixes regarding this issue.
+
+```
+Warning sqlite
+
+sqlite3-binding.c: In function ‘sqlite3SelectNew’:
+sqlite3-binding.c:128049:10: warning: function may return address of local variable [-Wreturn-local-addr]
+128049 | return pNew;
+| ^~~~
+sqlite3-binding.c:128009:10: note: declared here
+128009 | Select standin;
+| ^~~~~~~
+```
+
+### Notes & Config
+
+The database tables specifically impacted by the introduced triggers for the purpose of anonymization are "results" and "events". These triggers play a crucial role in ensuring data within these tables is processed to protect individual identities, aligning with privacy requirements.
+
+For complete anonymization, one can adjust the severity level of system messages/logs generated during Gophish execution. After changing the initial access password, it's possible to set the severity level in the config.json file by modifying the level value within the logging JSON object. This adjustment helps tailor the detail and quantity of logged information, aligning with privacy practices.
+
 ### Documentation
 
 The documentation available at getgophish.com/documentation pertains to the original version of Gophish, not the fork. If you notice anything missing or have suggestions for the original documentation, you're encouraged to file an issue on their site. For details specific to the fork, please refer to its respective repository or documentation.
