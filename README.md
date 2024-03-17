@@ -8,18 +8,16 @@ Gophish
 Gophish: Open-Source Phishing Toolkit
 
 [Gophish](https://getgophish.com) is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
+The fork GoPhish_PA_ITA specifically addresses privacy concerns related to data collection that links actions to individuals, offering solutions within this context.
 
 ### Install
 
-Installation of Gophish is dead-simple - just download and extract the zip containing the [release for your system](https://github.com/gophish/gophish/releases/), and run the binary. Gophish has binary releases for Windows, Mac, and Linux platforms.
+Installation of Gophish is dead-simple - The installation process for this specific fork of Gophish, considering the modifications made, is currently designed to be performed on Linux systems.
 
 ### Building From Source
 **If you are building from source, please note that Gophish requires Go v1.10 or above!**
 
-To build Gophish from source, simply run ```git clone https://github.com/gophish/gophish.git``` and ```cd``` into the project source directory. Then, run ```go build```. After this, you should have a binary called ```gophish``` in the current directory.
-
-### Docker
-You can also use Gophish via the official Docker container [here](https://hub.docker.com/r/gophish/gophish/).
+To build Gophish from source, simply run ```git clone https://github.com/dellagigibit/GoPhish_PA_ITA.git``` and ```cd``` into the project source directory. Then, run ```go build```. After this, you should have a binary called ```gophish``` in the current directory.
 
 ### Setup
 After running the Gophish binary, open an Internet browser to https://localhost:3333 and login with the default username and password listed in the log output.
@@ -32,11 +30,7 @@ Releases of Gophish prior to v0.10.1 have a default username of `admin` and pass
 
 ### Documentation
 
-Documentation can be found on our [site](http://getgophish.com/documentation). Find something missing? Let us know by filing an issue!
-
-### Issues
-
-Find a bug? Want more features? Find something missing in the documentation? Let us know! Please don't hesitate to [file an issue](https://github.com/gophish/gophish/issues/new) and we'll get right on it.
+The documentation available at getgophish.com/documentation pertains to the original version of Gophish, not the fork. If you notice anything missing or have suggestions for the original documentation, you're encouraged to file an issue on their site. For details specific to the fork, please refer to its respective repository or documentation.
 
 ### License
 ```
