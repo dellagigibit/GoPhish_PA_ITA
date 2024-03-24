@@ -1,4 +1,5 @@
 # Contribute to gophish
+# This is the original gophish project file CONTRIBUTING.md
 
 Thank you for your interest in contributing to gophish! It is our goal to make the best simulated phishing framework possible, and we are excited you want to help out.
 

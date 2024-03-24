@@ -49,7 +49,7 @@ sqlite3-binding.c:128009:10: note: declared here
 
 The database tables impacted by the introduced TRIGGERS for the purpose of anonymization are "results" and "events". These TRIGGERS, in db/db_sqlite3/migrations/20160118194630_init.sql, play a crucial role in ensuring data within these tables is processed to protect individual identities, aligning with privacy requirements.
 
-For complete anonymization, you can adjust the severity level of system messages/logs generated during Gophish execution. After changing the initial access password, it's possible to set the severity level in the config.json file by modifying the level value within the logging JSON object from "info" to "error". This adjustment helps tailor the detail and quantity of logged information, aligning with privacy practices.
+For complete anonymization, you can adjust the severity level of system messages/logs generated during Gophish execution. After changing the initial access password, it's possible to set the severity level in the config.json file by modifying the level value within the logging JSON object from "" to "error". This adjustment helps tailor the detail and quantity of logged information, aligning with privacy practices.
 
 ### Documentation
 
